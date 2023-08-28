@@ -1,0 +1,16 @@
+female(sri).
+female(lakshmi).
+female(siri).
+male(ram).
+male(shri).
+male(ravi).
+parent(sri,ram).
+parent(ram,lakshmi).
+parent(sri,shri).
+parent(shri,siri).
+parent(siri,ravi).
+parent(ravi,lakshmi).
+mother(X,Y):- parent(X,Y), female(X).
+father(X,Y):- parent(X,Y), male(X).
+sister(X,Y):- parent(Z,X),parent(Z,Y),female(X),x\==Y.
+brother(X,Y):- parent(Z,X),parent(Z,Y),male(X),x\==Y.female(sri).

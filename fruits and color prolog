@@ -1,0 +1,6 @@
+colour(apple,red).
+colour(banana,yellow).
+colour(grapes,green).
+colour(orange,orange).
+colour(grapes,black).
+fruits_colour(X):-colour(X).

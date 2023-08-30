@@ -1,0 +1,9 @@
+suitable_diet(heart_disease, [apple, salmon, spinach]).
+suitable_diet(diabetes, [apple, chicken_breast, spinach]).
+suitable_diet(ibs, [banana, carrot, oats, yogurt]).
+suitable_food(Food, Disease) :-
+    suitable_diet(Disease, Diet),
+    member(Food, Diet).
+suggest_diet(Disease) :-
+    suitable_diet(Disease, Diet),
+    write("Recommended diet for "), write(Disease), write(": "), write(Diet), nl.
